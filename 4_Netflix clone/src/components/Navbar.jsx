@@ -33,6 +33,12 @@ const Navbar = () => {
         <figure><img src={profile_img} alt="" /></figure>
         <figure><img src={caret_icon} alt="" /></figure>
 
+
+
+
+
+
+
         </div>
 
       </div>
