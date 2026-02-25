@@ -12,6 +12,9 @@ import Products from "./Pages/Products";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import RootLayout from "./layout/RootLayout";
+import ContactLayout from "./layout/ContactLayout";
+import Info from "./components/Info";
+import ContactForm from "./components/ContactForm";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -20,7 +23,11 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="products" element={<Products />} />
         <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<ContactLayout />}> 
+        
+        <Route path="info" element={<Info/>}/>
+        <Route path="form" element={<ContactForm/>}/>
+        </Route>
       </Route>,
     ),
   );

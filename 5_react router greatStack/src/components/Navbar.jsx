@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "../assets/react.svg";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate=useNavigate();
   return (
     <div className="navbar">
       <img src={logo} alt="" />
@@ -22,7 +23,7 @@ const Navbar = () => {
           <li>Contact</li>
         </Link>
       </ul>
-      <button>Get Started</button>
+      <button onClick={()=>(navigate("/about",{replace:true}))}>Get Started</button>
     </div>
   );
 };
